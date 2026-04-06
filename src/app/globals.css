@@ -22,12 +22,6 @@
   --color-white-dim: var(--white-dim);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   background: var(--black);
   color: var(--white);
@@ -36,6 +30,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display), serif;
+  line-height: normal;
 }
 
 .font-script {

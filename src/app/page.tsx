@@ -1,213 +1,139 @@
 import Link from "next/link";
 
-const signatureServices = [
+const services = [
   {
     title: "Precision Cuts",
-    description:
-      "Sharp fades, sculpted layers, and signature finishing designed around your face shape.",
-    detail: "From 30 min",
+    description: "Fades, layers, and sculpted finishing tailored to your face.",
+    tag: "From ₹500",
   },
   {
     title: "Color Artistry",
-    description:
-      "Dimensional balayage, glossing, and fashion tones with a healthy-hair-first approach.",
-    detail: "Consultation included",
+    description: "Balayage, glossing, and fashion tones — healthy-hair-first.",
+    tag: "Consultation incl.",
   },
   {
     title: "Skin Rituals",
-    description:
-      "Targeted facials and de-tan treatments that bring back clarity, lift, and glow.",
-    detail: "Luxury care",
+    description: "Facials and de-tan treatments for clarity, lift, and glow.",
+    tag: "Luxury care",
   },
   {
     title: "Bridal Styling",
-    description:
-      "Makeup, hair, and pre-event prep curated for brides, grooms, and celebration parties.",
-    detail: "Custom packages",
+    description: "Complete makeup, hair, and pre-event prep for the big day.",
+    tag: "Custom packages",
   },
 ];
 
-const highlights = [
-  { label: "Years Refining Looks", value: "5+" },
-  { label: "Luxury Services", value: "30+" },
-  { label: "Open Every Week", value: "7 Days" },
-  { label: "Guest Rating", value: "4.9/5" },
-];
-
-const experienceNotes = [
-  "Private consultations before every transformation.",
-  "Premium products selected for texture, color retention, and scalp health.",
-  "A unisex salon floor designed for comfort, calm, and precision service.",
+const stats = [
+  { value: "5+", label: "Years" },
+  { value: "30+", label: "Services" },
+  { value: "7", label: "Days / Week" },
+  { value: "4.9", label: "Rating" },
 ];
 
 const testimonials = [
   {
     name: "Rhea S.",
-    quote:
-      "The team understood exactly how to elevate my look without overdoing it. The finish felt polished and effortless.",
+    quote: "They elevated my look without overdoing it. Effortless and polished.",
   },
   {
     name: "Aman V.",
-    quote:
-      "Consistent cuts, clean detailing, and a space that actually feels premium. It has become my go-to grooming spot.",
+    quote: "Consistent cuts, clean detailing, and a space that feels premium.",
   },
   {
     name: "Neha & Family",
-    quote:
-      "We booked bridal and grooming services together and the planning was smooth from consultation to final styling.",
+    quote: "Bridal and grooming booked together — planning was seamless.",
   },
-];
-
-const bookingSteps = [
-  "Choose a service or request a custom consultation.",
-  "Pick your preferred date and slot on the booking page.",
-  "Receive confirmation on phone or WhatsApp from the salon team.",
 ];
 
 export default function Home() {
   return (
     <>
-      <section className="relative overflow-hidden bg-black px-6 py-24 md:py-32">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(212,175,55,0.16),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(212,175,55,0.1),_transparent_30%)]" />
-        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/60 to-transparent" />
+      {/* ── HERO ── */}
+      <section className="relative overflow-hidden bg-black px-6 py-28 md:py-36 lg:py-44">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,_rgba(212,175,55,0.12),_transparent_40%)]" />
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
 
-        <div className="relative z-10 mx-auto grid max-w-7xl gap-14 lg:grid-cols-[minmax(0,1.2fr)_minmax(340px,0.8fr)] lg:items-center">
-          <div>
-            <p className="mb-5 text-sm uppercase tracking-[0.4em] text-gold">
-              Luxury Grooming, Tailored Styling
-            </p>
-            <h1 className="max-w-4xl text-5xl font-semibold leading-tight text-white md:text-7xl">
-              Signature salon care for everyday confidence and standout occasions.
-            </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-white-dim">
-              Glamrootz Signature blends modern precision with a rich, editorial
-              aesthetic. From sharp grooming to bridal transformations, each
-              appointment is designed to feel elevated from consultation to final
-              reveal.
-            </p>
+        <div className="relative z-10 mx-auto max-w-6xl text-center">
+          <p className="mb-5 text-xs uppercase tracking-[0.5em] text-gold/80">
+            Premium Unisex Salon
+          </p>
 
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <Link
-                href="/booking"
-                className="inline-flex items-center justify-center rounded-sm bg-gold px-8 py-4 text-sm font-semibold uppercase tracking-[0.22em] text-black transition-all duration-300 hover:bg-gold-light"
-              >
-                Book Appointment
-              </Link>
-              <Link
-                href="/services"
-                className="inline-flex items-center justify-center rounded-sm border border-gold/40 px-8 py-4 text-sm uppercase tracking-[0.22em] text-gold transition-all duration-300 hover:border-gold hover:bg-gold/10"
-              >
-                Explore Services
-              </Link>
-            </div>
+          <h1 className="mx-auto max-w-4xl text-4xl font-semibold leading-[1.15] text-white sm:text-5xl md:text-6xl lg:text-7xl">
+            Signature salon care
+            <br />
+            <span className="text-gradient-gold">for every occasion.</span>
+          </h1>
 
-            <div className="mt-14 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-              {highlights.map((item) => (
-                <div
-                  key={item.label}
-                  className="rounded-sm border border-gold/10 bg-black-light/70 p-5 backdrop-blur-sm"
-                >
-                  <p className="text-3xl font-semibold text-gradient-gold">
-                    {item.value}
-                  </p>
-                  <p className="mt-2 text-sm uppercase tracking-[0.18em] text-white-dim/80">
-                    {item.label}
-                  </p>
-                </div>
-              ))}
-            </div>
+          <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-white-dim/80 md:text-lg">
+            Modern precision meets editorial aesthetics — from sharp grooming
+            to bridal transformations.
+          </p>
+
+          <div className="mt-10 flex justify-center gap-5">
+            <Link
+              href="/booking"
+              className="rounded-sm bg-gold px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-black transition-all duration-300 hover:bg-gold-light hover:shadow-[0_0_30px_rgba(212,175,55,0.25)]"
+            >
+              Book Now
+            </Link>
+            <Link
+              href="/services"
+              className="rounded-sm border border-gold/30 px-8 py-4 text-sm uppercase tracking-[0.2em] text-gold transition-all duration-300 hover:border-gold hover:bg-gold/5"
+            >
+              Our Services
+            </Link>
           </div>
 
-          <div className="relative">
-            <div className="absolute -left-6 top-8 hidden h-32 w-32 rounded-full border border-gold/20 md:block" />
-            <div className="absolute -right-8 bottom-10 hidden h-24 w-24 rounded-full bg-gold/10 blur-2xl md:block" />
-
-            <div className="relative overflow-hidden rounded-sm border border-gold/20 bg-gradient-to-br from-black-light via-black to-black p-8 shadow-[0_0_50px_rgba(212,175,55,0.08)]">
-              <div className="flex items-start justify-between gap-6 border-b border-gold/10 pb-6">
-                <div>
-                  <p className="text-sm uppercase tracking-[0.3em] text-gold">
-                    This Week
-                  </p>
-                  <h2 className="mt-3 text-3xl font-semibold text-white">
-                    The signature chair experience
-                  </h2>
-                </div>
-                <span className="rounded-full border border-gold/20 px-4 py-1 text-xs uppercase tracking-[0.24em] text-gold">
-                  Since 2020
-                </span>
+          {/* Stats strip */}
+          <div className="mx-auto mt-20 flex max-w-2xl items-center justify-between border-t border-b border-gold/10 py-8">
+            {stats.map((s, i) => (
+              <div key={s.label} className={`flex-1 text-center ${i < stats.length - 1 ? "border-r border-gold/10" : ""}`}>
+                <p className="text-3xl font-semibold text-gradient-gold md:text-4xl">
+                  {s.value}
+                </p>
+                <p className="mt-1 text-xs uppercase tracking-[0.2em] text-white-dim/60">
+                  {s.label}
+                </p>
               </div>
-
-              <div className="mt-8 grid gap-4 sm:grid-cols-2">
-                <div className="rounded-sm border border-gold/10 bg-white/3 p-5">
-                  <p className="text-sm uppercase tracking-[0.2em] text-white-dim/70">
-                    Today&apos;s Focus
-                  </p>
-                  <p className="mt-3 text-xl text-white">
-                    Hair contouring, bridal previews, and premium skin rituals.
-                  </p>
-                </div>
-                <div className="rounded-sm border border-gold/10 bg-gold/10 p-5">
-                  <p className="text-sm uppercase tracking-[0.2em] text-gold-dark">
-                    Walk-in Friendly
-                  </p>
-                  <p className="mt-3 text-xl text-white">
-                    Appointments preferred for color, spa, and event styling.
-                  </p>
-                </div>
-              </div>
-
-              <div className="mt-8 space-y-4">
-                {experienceNotes.map((note) => (
-                  <div
-                    key={note}
-                    className="flex items-start gap-3 rounded-sm border border-gold/10 bg-black-light/60 px-4 py-4"
-                  >
-                    <span className="mt-1 text-gold">&#10022;</span>
-                    <p className="text-sm leading-7 text-white-dim">{note}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-black-light px-6 py-20">
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+      {/* ── SERVICES ── */}
+      <section className="bg-black-light px-6 py-24 lg:py-32">
+        <div className="mx-auto max-w-6xl">
+          <div className="mb-14 flex items-end justify-between">
             <div>
-              <p className="text-sm uppercase tracking-[0.35em] text-gold">
-                Signature Menu
+              <p className="text-xs uppercase tracking-[0.4em] text-gold/80">
+                What We Do
               </p>
-              <h2 className="mt-4 text-4xl font-semibold text-gradient-gold">
-                Crafted services, not rushed routines
+              <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">
+                Signature Services
               </h2>
             </div>
             <Link
               href="/services"
-              className="text-sm uppercase tracking-[0.24em] text-white-dim transition-colors hover:text-gold"
+              className="hidden text-xs uppercase tracking-[0.2em] text-white-dim/60 transition-colors hover:text-gold sm:block"
             >
-              View full service list
+              View all →
             </Link>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-            {signatureServices.map((service) => (
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {services.map((s) => (
               <article
-                key={service.title}
-                className="group flex h-full flex-col rounded-sm border border-gold/10 bg-black px-6 py-8 transition-all duration-300 hover:-translate-y-1 hover:border-gold/30"
+                key={s.title}
+                className="group flex flex-col rounded-sm border border-gold/8 bg-black p-7 transition-all duration-300 hover:-translate-y-1 hover:border-gold/25"
               >
-                <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-full border border-gold/20 text-gold">
-                  &#10022;
-                </div>
-                <h3 className="text-2xl font-semibold text-white transition-colors group-hover:text-gold-light">
-                  {service.title}
+                <h3 className="text-xl font-semibold text-white group-hover:text-gold-light transition-colors">
+                  {s.title}
                 </h3>
-                <p className="mt-4 flex-1 leading-7 text-white-dim">
-                  {service.description}
+                <p className="mt-3 flex-1 text-sm leading-relaxed text-white-dim/70">
+                  {s.description}
                 </p>
-                <p className="mt-6 text-sm uppercase tracking-[0.22em] text-gold">
-                  {service.detail}
+                <p className="mt-5 border-t border-gold/8 pt-4 text-xs uppercase tracking-[0.2em] text-gold/70">
+                  {s.tag}
                 </p>
               </article>
             ))}
@@ -215,44 +141,42 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-black px-6 py-20">
-        <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[minmax(320px,0.85fr)_minmax(0,1.15fr)] lg:items-center">
-          <div className="rounded-sm border border-gold/15 bg-gradient-to-b from-gold/10 to-transparent p-8">
-            <p className="text-sm uppercase tracking-[0.35em] text-gold">
-              Why Guests Return
+      {/* ── WHY GLAMROOTZ ── */}
+      <section className="bg-black px-6 py-24 lg:py-32">
+        <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-2 lg:items-center">
+          <div>
+            <p className="text-xs uppercase tracking-[0.4em] text-gold/80">
+              The Experience
             </p>
-            <h2 className="mt-4 text-4xl font-semibold text-white">
-              A salon visit that feels composed, precise, and personal.
+            <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">
+              Why guests keep coming back.
             </h2>
-            <p className="mt-6 leading-8 text-white-dim">
-              Every booking starts with listening. We shape each cut, color, and
-              treatment around your routine, your features, and the finish you
-              actually want to maintain after you leave.
+            <p className="mt-5 max-w-md text-base leading-relaxed text-white-dim/70">
+              Every visit starts with listening — we shape each service around
+              your routine, features, and desired finish.
             </p>
+            <Link
+              href="/about"
+              className="mt-8 inline-block text-sm uppercase tracking-[0.2em] text-gold transition-colors hover:text-gold-light"
+            >
+              Learn more →
+            </Link>
           </div>
 
-          <div className="grid gap-5 md:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-3">
             {[
-              {
-                title: "Consult First",
-                body: "We align on goals, upkeep, and the right service path before any major treatment starts.",
-              },
-              {
-                title: "Premium Finish",
-                body: "Products and techniques are chosen to preserve shine, structure, and skin comfort.",
-              },
-              {
-                title: "Photo-Ready Results",
-                body: "Every appointment is finished with styling detail so your look holds up on camera and off.",
-              },
+              { n: "01", title: "Consult", text: "We align on goals before any treatment begins." },
+              { n: "02", title: "Craft", text: "Products and techniques chosen for lasting results." },
+              { n: "03", title: "Finish", text: "Styled to look photo-ready when you leave the chair." },
             ].map((item) => (
               <div
-                key={item.title}
-                className="rounded-sm border border-gold/10 bg-black-light/60 p-6"
+                key={item.n}
+                className="rounded-sm border border-gold/8 bg-black-light/50 p-6 transition-colors hover:border-gold/20"
               >
-                <h3 className="text-xl font-semibold text-gold">{item.title}</h3>
-                <p className="mt-4 text-sm leading-7 text-white-dim">
-                  {item.body}
+                <p className="text-2xl font-semibold text-gold/30">{item.n}</p>
+                <h3 className="mt-3 text-lg font-semibold text-white">{item.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-white-dim/60">
+                  {item.text}
                 </p>
               </div>
             ))}
@@ -260,72 +184,29 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-black-light px-6 py-20">
-        <div className="mx-auto max-w-7xl">
+      {/* ── TESTIMONIALS ── */}
+      <section className="bg-black-light px-6 py-24 lg:py-32">
+        <div className="mx-auto max-w-6xl">
           <div className="mb-12 text-center">
-            <p className="text-sm uppercase tracking-[0.35em] text-gold">
-              Book In Three Steps
+            <p className="text-xs uppercase tracking-[0.4em] text-gold/80">
+              Guest Notes
             </p>
-            <h2 className="mt-4 text-4xl font-semibold text-gradient-gold">
-              Smooth scheduling, fast confirmation
+            <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">
+              What our clients say
             </h2>
           </div>
 
           <div className="grid gap-6 md:grid-cols-3">
-            {bookingSteps.map((step, index) => (
-              <div
-                key={step}
-                className="rounded-sm border border-gold/10 bg-black px-6 py-8 text-center"
-              >
-                <p className="text-sm uppercase tracking-[0.3em] text-gold">
-                  0{index + 1}
-                </p>
-                <p className="mt-5 leading-8 text-white-dim">{step}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-12 text-center">
-            <Link
-              href="/booking"
-              className="inline-flex items-center justify-center rounded-sm bg-gold px-8 py-4 text-sm font-semibold uppercase tracking-[0.22em] text-black transition-colors duration-300 hover:bg-gold-light"
-            >
-              Reserve Your Time
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-black px-6 py-20">
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-            <div>
-              <p className="text-sm uppercase tracking-[0.35em] text-gold">
-                Guest Notes
-              </p>
-              <h2 className="mt-4 text-4xl font-semibold text-white">
-                What clients remember after the mirror reveal
-              </h2>
-            </div>
-            <Link
-              href="/contact"
-              className="text-sm uppercase tracking-[0.24em] text-white-dim transition-colors hover:text-gold"
-            >
-              Ask about custom packages
-            </Link>
-          </div>
-
-          <div className="grid gap-6 lg:grid-cols-3">
-            {testimonials.map((item) => (
+            {testimonials.map((t) => (
               <blockquote
-                key={item.name}
-                className="rounded-sm border border-gold/10 bg-black-light/70 px-6 py-8"
+                key={t.name}
+                className="flex flex-col justify-between rounded-sm border border-gold/8 bg-black p-7 transition-colors hover:border-gold/20"
               >
-                <p className="text-lg leading-8 text-white">
-                  &ldquo;{item.quote}&rdquo;
+                <p className="text-base leading-relaxed text-white/90">
+                  &ldquo;{t.quote}&rdquo;
                 </p>
-                <footer className="mt-6 text-sm uppercase tracking-[0.24em] text-gold">
-                  {item.name}
+                <footer className="mt-5 text-xs uppercase tracking-[0.2em] text-gold/70">
+                  — {t.name}
                 </footer>
               </blockquote>
             ))}
@@ -333,31 +214,27 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-gradient-to-r from-black via-black-light to-black px-6 py-20">
-        <div className="mx-auto max-w-5xl rounded-sm border border-gold/20 bg-black/70 px-8 py-14 text-center shadow-[0_0_45px_rgba(212,175,55,0.08)] backdrop-blur-sm md:px-14">
-          <p className="text-sm uppercase tracking-[0.35em] text-gold">
-            Ready For Your Next Look
-          </p>
-          <h2 className="mt-5 text-4xl font-semibold text-gradient-gold md:text-5xl">
-            Visit Glamrootz Signature for your next cut, color, ritual, or celebration styling.
+      {/* ── CTA ── */}
+      <section className="bg-black px-6 py-28 lg:py-36">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="text-3xl font-semibold text-gradient-gold sm:text-4xl md:text-5xl">
+            Ready for your next look?
           </h2>
-          <p className="mx-auto mt-6 max-w-2xl leading-8 text-white-dim">
-            Book online, contact the team for a consultation, or browse the
-            gallery for inspiration before your appointment.
+          <p className="mx-auto mt-5 max-w-lg text-base leading-relaxed text-white-dim/70">
+            Book online or reach out for a free consultation.
           </p>
-
-          <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
+          <div className="mt-10 flex justify-center gap-5">
             <Link
               href="/booking"
-              className="inline-flex items-center justify-center rounded-sm bg-gold px-8 py-4 text-sm font-semibold uppercase tracking-[0.22em] text-black transition-colors duration-300 hover:bg-gold-light"
+              className="rounded-sm bg-gold px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-black transition-all duration-300 hover:bg-gold-light hover:shadow-[0_0_30px_rgba(212,175,55,0.25)]"
             >
               Book Now
             </Link>
             <Link
-              href="/gallery"
-              className="inline-flex items-center justify-center rounded-sm border border-gold/40 px-8 py-4 text-sm uppercase tracking-[0.22em] text-gold transition-colors duration-300 hover:border-gold hover:bg-gold/10"
+              href="/contact"
+              className="rounded-sm border border-gold/30 px-8 py-4 text-sm uppercase tracking-[0.2em] text-gold transition-all duration-300 hover:border-gold hover:bg-gold/5"
             >
-              View Gallery
+              Contact Us
             </Link>
           </div>
         </div>

@@ -19,11 +19,11 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-gold/20">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex flex-col items-start">
-          <span className="font-display text-2xl font-bold tracking-wider text-gradient-gold">
+        <Link href="/" className="flex flex-col items-start gap-0.5">
+          <span className="font-display text-2xl font-bold tracking-widest text-gradient-gold leading-none pb-0.5">
             GLAMROOTZ
           </span>
-          <span className="font-script text-gold-light text-sm -mt-1">
+          <span className="font-script text-gold-light text-base leading-none pl-0.5">
             Signature
           </span>
         </Link>
