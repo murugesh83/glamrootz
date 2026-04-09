@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { socialLinks } from "@/components/socialLinks";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -75,14 +76,17 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
-            <div className="mt-5 flex gap-4">
-              {["Instagram", "Facebook", "YouTube"].map((s) => (
+            <div className="mt-5 flex flex-wrap gap-3">
+              {socialLinks.map((link) => (
                 <a
-                  key={s}
-                  href="#"
-                  className="text-xs uppercase tracking-wider text-white-dim/40 transition-colors hover:text-gold"
+                  key={link.id}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={link.label}
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-gold/20 bg-gold/10 text-gold transition-all duration-300 hover:-translate-y-0.5 hover:bg-gold hover:text-black"
                 >
-                  {s}
+                  {link.renderIcon("h-4 w-4")}
                 </a>
               ))}
             </div>

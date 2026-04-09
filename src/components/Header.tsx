@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { headerSocialLinks } from "@/components/socialLinks";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -28,28 +29,45 @@ export default function Header() {
           </span>
         </Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) =>
-            link.label === "Book Now" ? (
-              <Link
-                key={link.href}
+        <div className="hidden items-center gap-6 md:flex">
+          {/* Desktop Nav */}
+          <nav className="flex items-center gap-8">
+            {navLinks.map((link) =>
+              link.label === "Book Now" ? (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="rounded-sm bg-gold px-6 py-2 text-sm font-semibold uppercase tracking-wider text-black transition-all duration-300 hover:bg-gold-light"
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm uppercase tracking-wider text-white-dim transition-colors duration-300 hover:text-gold"
+                >
+                  {link.label}
+                </Link>
+              )
+            )}
+          </nav>
+
+          <div className="hidden items-center gap-2 border-l border-gold/10 pl-6 xl:flex">
+            {headerSocialLinks.map((link) => (
+              <a
+                key={link.id}
                 href={link.href}
-                className="px-6 py-2 bg-gold text-black font-semibold text-sm tracking-wider uppercase hover:bg-gold-light transition-all duration-300 rounded-sm"
-              >
-                {link.label}
-              </Link>
-            ) : (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-white-dim hover:text-gold text-sm tracking-wider uppercase transition-colors duration-300"
-              >
-                {link.label}
-              </Link>
-            )
-          )}
-        </nav>
+                target="_blank"
+              rel="noopener noreferrer"
+              aria-label={link.label}
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-gold/20 bg-gold/10 text-gold transition-all duration-300 hover:-translate-y-0.5 hover:bg-gold hover:text-black"
+            >
+              {link.renderIcon("h-4 w-4")}
+            </a>
+          ))}
+        </div>
+        </div>
 
         {/* Mobile Menu Button */}
         <button
@@ -96,6 +114,21 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
+
+          <div className="mt-2 flex items-center gap-3 border-t border-gold/10 pt-4">
+            {headerSocialLinks.map((link) => (
+              <a
+                key={link.id}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={link.label}
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-gold/20 bg-gold/10 text-gold transition-all duration-300 hover:bg-gold hover:text-black"
+              >
+                {link.renderIcon("h-4 w-4")}
+              </a>
+            ))}
+          </div>
         </nav>
       </div>
     </header>
