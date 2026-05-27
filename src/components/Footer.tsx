@@ -64,15 +64,15 @@ export default function Footer() {
               Contact
             </h4>
             <ul className="space-y-2.5 text-sm text-white-dim/60">
-              <li>123 Luxury Lane, Mumbai 400001</li>
+              <li>Maxworth Nagar, NO.1&2, Lavender St, VGN Blooming Garden, Kolapakkam, Chennai 600125</li>
               <li>
-                <a href="tel:+919876543210" className="transition-colors hover:text-gold">
-                  +91 98765 43210
+                <a href="tel:+919500569095" className="transition-colors hover:text-gold">
+                  +91 95005 69095
                 </a>
               </li>
               <li>
-                <a href="mailto:hello@glamrootz.com" className="transition-colors hover:text-gold">
-                  hello@glamrootz.com
+                <a href="mailto:glamrootzsignature@gmail.com" className="transition-colors hover:text-gold">
+                  glamrootzsignature@gmail.com
                 </a>
               </li>
             </ul>

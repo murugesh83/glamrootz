@@ -126,7 +126,7 @@ export default function Booking() {
                 <input
                   type="tel"
                   required
-                  placeholder="+91 98765 43210"
+                  placeholder="+91 95005 69095"
                   className="w-full bg-black border border-gold/15 text-white px-4 py-3 rounded-sm text-sm focus:border-gold focus:outline-none transition-colors placeholder:text-white-dim/25"
                 />
               </div>

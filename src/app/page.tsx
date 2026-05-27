@@ -40,7 +40,7 @@ const stats = [
   { value: "5+", label: "Years Refining Looks" },
   { value: "30+", label: "Luxury Services" },
   { value: "7 Days", label: "Open Every Week" },
-  { value: "4.9/5", label: "Guest Rating" },
+  { value: "5.0", label: "Google Rating" },
 ];
 
 const testimonials = [
@@ -438,7 +438,7 @@ export default function Home() {
               Book Now
             </Link>
             <a
-              href="tel:+919876543210"
+              href="tel:+919500569095"
               className="rounded-sm border border-gold/30 px-10 py-4 text-sm uppercase tracking-[0.2em] text-gold transition-all duration-300 hover:border-gold hover:bg-gold/5"
             >
               Call Us

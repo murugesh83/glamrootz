@@ -33,7 +33,7 @@ const cormorantGaramond = Cormorant_Garamond({
 export const metadata: Metadata = {
   title: "Glamrootz Signature | Premium Unisex Salon",
   description:
-    "Experience luxury grooming at Glamrootz Signature — your premium unisex salon for haircuts, styling, skin care, and bridal packages.",
+    "Experience luxury grooming at Glamrootz Signature — your premium unisex salon in Kolapakkam, Chennai for haircuts, styling, skin care, and bridal packages.",
   keywords: [
     "salon",
     "unisex salon",

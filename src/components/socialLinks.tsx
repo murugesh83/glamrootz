@@ -68,7 +68,7 @@ export const socialLinks: SocialLink[] = [
   {
     id: "whatsapp",
     label: "WhatsApp",
-    href: "https://wa.me/919876543210?text=Hi%20Glamrootz!%20I'd%20like%20to%20book%20an%20appointment.",
+    href: "https://wa.me/919500569095?text=Hi%20Glamrootz!%20I'd%20like%20to%20book%20an%20appointment.",
     railClassName: "bg-[#25D366]",
     renderIcon: WhatsAppIcon,
   },
@@ -100,7 +100,7 @@ export const socialLinks: SocialLink[] = [
   {
     id: "location",
     label: "Location",
-    href: "https://www.google.com/maps/search/?api=1&query=123+Luxury+Lane+Fashion+District+Mumbai+400001",
+    href: "https://www.google.com/maps/place/Glamrootz+Signature+Unisex+Salon/@13.0146044,80.1533112,17z",
     railClassName: "bg-[#8BC34A]",
     renderIcon: LocationIcon,
   },

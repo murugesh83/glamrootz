@@ -53,9 +53,11 @@ export default function Contact() {
                   title: "Address",
                   content: (
                     <p className="text-white-dim/60 text-sm leading-relaxed">
-                      123 Luxury Lane, Fashion District,
+                      Maxworth Nagar, NO.1&2, Lavender Street,
                       <br />
-                      Mumbai, Maharashtra 400001
+                      VGN Blooming Garden, Kolapakkam,
+                      <br />
+                      Chennai, Tamil Nadu 600125
                     </p>
                   ),
                 },
@@ -64,10 +66,10 @@ export default function Contact() {
                   title: "Phone",
                   content: (
                     <a
-                      href="tel:+919876543210"
+                      href="tel:+919500569095"
                       className="text-white-dim/60 text-sm hover:text-gold transition-colors"
                     >
-                      +91 98765 43210
+                      +91 95005 69095
                     </a>
                   ),
                 },
@@ -76,10 +78,10 @@ export default function Contact() {
                   title: "Email",
                   content: (
                     <a
-                      href="mailto:hello@glamrootz.com"
+                      href="mailto:glamrootzsignature@gmail.com"
                       className="text-white-dim/60 text-sm hover:text-gold transition-colors"
                     >
-                      hello@glamrootz.com
+                      glamrootzsignature@gmail.com
                     </a>
                   ),
                 },
@@ -118,7 +120,7 @@ export default function Contact() {
               />
               <div className="absolute inset-0 flex items-center justify-center">
                 <a
-                  href="https://www.google.com/maps/search/?api=1&query=123+Luxury+Lane+Fashion+District+Mumbai+400001"
+                  href="https://www.google.com/maps/place/Glamrootz+Signature+Unisex+Salon/@13.0146044,80.1533112,17z"
                   target="_blank"
                   rel="noreferrer"
                   className="rounded-sm bg-gold/90 px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-black hover:bg-gold transition-colors"
