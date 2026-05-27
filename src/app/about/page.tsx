@@ -66,10 +66,10 @@ export default function About() {
               The Beginning
             </p>
             <h2 className="text-3xl font-semibold text-white mb-6">
-              A legacy of luxury since 2020
+              A legacy of luxury since 2018
             </h2>
             <p className="text-white-dim/70 leading-relaxed mb-4">
-              Founded in 2020, Glamrootz Signature was born from a vision to
+              Founded in 2018, Glamrootz Signature was born from a vision to
               redefine the salon experience. We believe that grooming is not just
               a service &mdash; it&apos;s an art form that deserves the finest
               attention to detail.

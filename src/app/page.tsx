@@ -250,7 +250,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-t from-black-light/80 to-transparent" />
             <div className="absolute bottom-6 left-6 right-6">
               <p className="text-xs uppercase tracking-[0.3em] text-gold">
-                Since 2020
+                Since 2018
               </p>
               <p className="mt-1 text-lg font-semibold text-white">
                 The experience that defines us

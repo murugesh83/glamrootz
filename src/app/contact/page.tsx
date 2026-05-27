@@ -65,12 +65,20 @@ export default function Contact() {
                   icon: "\u260E",
                   title: "Phone",
                   content: (
-                    <a
-                      href="tel:+919500569095"
-                      className="text-white-dim/60 text-sm hover:text-gold transition-colors"
-                    >
-                      +91 95005 69095
-                    </a>
+                    <div className="flex flex-col gap-1">
+                      <a
+                        href="tel:+919500569095"
+                        className="text-white-dim/60 text-sm hover:text-gold transition-colors"
+                      >
+                        +91 95005 69095 (Mobile)
+                      </a>
+                      <a
+                        href="tel:04448577888"
+                        className="text-white-dim/60 text-sm hover:text-gold transition-colors"
+                      >
+                        044-48577888 (Landline)
+                      </a>
+                    </div>
                   ),
                 },
                 {
@@ -91,7 +99,7 @@ export default function Contact() {
                   content: (
                     <div className="text-white-dim/60 text-sm space-y-1">
                       <p>Mon &ndash; Sat: 10:00 AM &ndash; 9:00 PM</p>
-                      <p>Sunday: 11:00 AM &ndash; 7:00 PM</p>
+                      <p>Sunday: 9:30 AM &ndash; 9:00 PM</p>
                     </div>
                   ),
                 },
@@ -120,7 +128,7 @@ export default function Contact() {
               />
               <div className="absolute inset-0 flex items-center justify-center">
                 <a
-                  href="https://www.google.com/maps/place/Glamrootz+Signature+Unisex+Salon/@13.0146044,80.1533112,17z"
+                  href="https://maps.app.goo.gl/KgPV9sJVFKqTwPTf6"
                   target="_blank"
                   rel="noreferrer"
                   className="rounded-sm bg-gold/90 px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-black hover:bg-gold transition-colors"

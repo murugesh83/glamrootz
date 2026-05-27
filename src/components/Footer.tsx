@@ -15,7 +15,7 @@ export default function Footer() {
             </h3>
             <p className="font-script text-gold-light text-sm">Signature</p>
             <p className="mt-3 text-sm leading-relaxed text-white-dim/60">
-              Premium unisex salon — luxury grooming since 2020.
+              Premium unisex salon — luxury grooming since 2018.
             </p>
           </div>
 
@@ -66,9 +66,14 @@ export default function Footer() {
             <ul className="space-y-2.5 text-sm text-white-dim/60">
               <li>Maxworth Nagar, NO.1&2, Lavender St, VGN Blooming Garden, Kolapakkam, Chennai 600125</li>
               <li>
-                <a href="tel:+919500569095" className="transition-colors hover:text-gold">
-                  +91 95005 69095
-                </a>
+                <div className="flex flex-col gap-1">
+                  <a href="tel:+919500569095" className="transition-colors hover:text-gold">
+                    +91 95005 69095 (Mobile)
+                  </a>
+                  <a href="tel:04448577888" className="transition-colors hover:text-gold">
+                    044-48577888 (Landline)
+                  </a>
+                </div>
               </li>
               <li>
                 <a href="mailto:glamrootsalon@gmail.com" className="transition-colors hover:text-gold">

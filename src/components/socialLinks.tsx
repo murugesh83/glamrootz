@@ -100,7 +100,7 @@ export const socialLinks: SocialLink[] = [
   {
     id: "location",
     label: "Location",
-    href: "https://www.google.com/maps/place/Glamrootz+Signature+Unisex+Salon/@13.0146044,80.1533112,17z",
+    href: "https://maps.app.goo.gl/KgPV9sJVFKqTwPTf6",
     railClassName: "bg-[#8BC34A]",
     renderIcon: LocationIcon,
   },
