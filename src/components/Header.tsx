@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { headerSocialLinks } from "@/components/socialLinks";
 
@@ -18,15 +19,18 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-gold/20">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex flex-col items-start gap-0.5">
-          <span className="font-display text-2xl font-bold tracking-widest text-gradient-gold leading-none pb-0.5">
-            GLAMROOTZ
-          </span>
-          <span className="font-script text-gold-light text-base leading-none pl-0.5">
-            Signature
-          </span>
+        <Link href="/" className="flex items-center">
+          <div className="relative h-12 w-32 md:h-14 md:w-36">
+            <Image
+              src="/logo.jpg"
+              alt="Glamrootz Signature Unisex Salon"
+              fill
+              className="object-contain hover:opacity-90 transition-opacity"
+              priority
+            />
+          </div>
         </Link>
 
         <div className="hidden items-center gap-6 md:flex">

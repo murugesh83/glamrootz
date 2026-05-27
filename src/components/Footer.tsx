@@ -71,8 +71,8 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="mailto:glamrootzsignature@gmail.com" className="transition-colors hover:text-gold">
-                  glamrootzsignature@gmail.com
+                <a href="mailto:glamrootsalon@gmail.com" className="transition-colors hover:text-gold">
+                  glamrootsalon@gmail.com
                 </a>
               </li>
             </ul>

@@ -78,10 +78,10 @@ export default function Contact() {
                   title: "Email",
                   content: (
                     <a
-                      href="mailto:glamrootzsignature@gmail.com"
+                      href="mailto:glamrootsalon@gmail.com"
                       className="text-white-dim/60 text-sm hover:text-gold transition-colors"
                     >
-                      glamrootzsignature@gmail.com
+                      glamrootsalon@gmail.com
                     </a>
                   ),
                 },

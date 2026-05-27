@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm)",
+      "Bash(npm --version)",
+      "Read(//usr/local/bin/**)",
+      "Bash(brew list:*)",
+      "Bash(brew install:*)",
+      "Bash(export PATH=\"/opt/homebrew/bin:$PATH\")",
+      "Read(//private/tmp/**)",
+      "Bash(npx create-next-app@latest glamrootz --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm)",
+      "Bash(npm run:*)",
+      "Bash(lsof -ti:3000,3001,3002)",
+      "Bash(xargs kill:*)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(git checkout:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m ':*)",
+      "Bash(rm -f /Users/murugesansagadevan/Desktop/Glamrootz/.git/index.lock)",
+      "Bash(git push:*)",
+      "Bash(gh pr create --title 'Add real photos and polish all pages' --body ':*)",
+      "Bash(gh auth:*)",
+      "Bash(git merge:*)",
+      "Bash(fuser /Users/murugesansagadevan/Desktop/Glamrootz/.git/index.lock)",
+      "Bash(ls -la /Users/murugesansagadevan/Desktop/Glamrootz/.git/*.lock)",
+      "Bash(ls -la /Users/murugesansagadevan/Desktop/Glamrootz/.git/refs/heads/*.lock)",
+      "Bash(kill -9 66748 66925 66928)"
+    ]
+  }
+}
