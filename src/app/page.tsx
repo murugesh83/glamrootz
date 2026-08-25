@@ -68,7 +68,7 @@ export default function Home() {
       <section className="relative overflow-hidden bg-black">
         <div className="mx-auto grid max-w-7xl lg:grid-cols-2 lg:min-h-[85vh]">
           {/* Left: Text */}
-          <div className="relative z-10 flex flex-col justify-center px-6 py-24 md:px-12 lg:py-32 lg:pr-16">
+          <div className="relative z-10 flex flex-col justify-center px-6 py-24 pl-20 md:pl-24 lg:py-32 lg:pl-20 lg:pr-16">
             <p className="mb-5 text-xs uppercase tracking-[0.5em] text-pink/80">
               Premium Unisex Salon
             </p>
@@ -125,29 +125,6 @@ export default function Home() {
               priority
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent" />
-
-            {/* Floating info cards */}
-            <div className="absolute right-8 top-1/4 w-64 space-y-4">
-              <div className="rounded-sm border border-pink/20 bg-black/80 p-5 backdrop-blur-md">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-pink">
-                  This Week
-                </p>
-                <p className="mt-2 text-lg font-semibold text-white">
-                  The signature chair experience
-                </p>
-                <p className="mt-2 text-xs leading-relaxed text-white-dim/60">
-                  Hair contouring, bridal previews, and premium skin rituals.
-                </p>
-              </div>
-              <div className="rounded-sm border border-pink/20 bg-black/80 p-4 backdrop-blur-md">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-pink">
-                  Walk-In Friendly
-                </p>
-                <p className="mt-1 text-xs leading-relaxed text-white-dim/60">
-                  Appointments preferred for color, spa, and event styling.
-                </p>
-              </div>
-            </div>
           </div>
         </div>
 
