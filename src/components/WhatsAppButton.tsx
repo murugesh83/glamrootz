@@ -34,7 +34,7 @@ export default function WhatsAppButton() {
       </div>
 
       <div className="fixed inset-x-4 bottom-4 z-40 lg:hidden">
-        <div className="mx-auto flex max-w-max items-center gap-2 rounded-full border border-gold/15 bg-black/88 px-3 py-2 shadow-[0_18px_40px_rgba(0,0,0,0.35)] backdrop-blur-md">
+        <div className="mx-auto flex max-w-max items-center gap-2 rounded-full border border-pink/15 bg-black/88 px-3 py-2 shadow-[0_18px_40px_rgba(0,0,0,0.35)] backdrop-blur-md">
           {headerSocialLinks.map((link) => (
             <a
               key={link.id}
@@ -42,7 +42,7 @@ export default function WhatsAppButton() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={link.label}
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-gold/20 bg-gold/10 text-gold transition-all duration-300 hover:-translate-y-0.5 hover:bg-gold hover:text-black"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-pink/20 bg-pink/10 text-pink transition-all duration-300 hover:-translate-y-0.5 hover:bg-pink hover:text-white"
             >
               {link.renderIcon("h-4 w-4")}
             </a>

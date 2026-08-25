@@ -6,7 +6,7 @@ const services = [
     title: "Precision Cuts",
     description:
       "Sharp fades, sculpted layers, and signature finishing designed around your face shape.",
-    tag: "FROM \u20b9500 \u00b7 30 MIN",
+    tag: "EXPERT STYLING",
     image:
       "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&q=80",
   },
@@ -69,13 +69,13 @@ export default function Home() {
         <div className="mx-auto grid max-w-7xl lg:grid-cols-2 lg:min-h-[85vh]">
           {/* Left: Text */}
           <div className="relative z-10 flex flex-col justify-center px-6 py-24 md:px-12 lg:py-32 lg:pr-16">
-            <p className="mb-5 text-xs uppercase tracking-[0.5em] text-gold/80">
+            <p className="mb-5 text-xs uppercase tracking-[0.5em] text-pink/80">
               Premium Unisex Salon
             </p>
 
             <h1 className="max-w-lg text-4xl font-semibold leading-[1.1] text-white sm:text-5xl lg:text-6xl">
               Signature salon care for everyday confidence
-              <span className="text-gradient-gold"> and standout occasions.</span>
+              <span className="text-gradient-pink"> and standout occasions.</span>
             </h1>
 
             <p className="mt-6 max-w-md text-base leading-relaxed text-white-dim/70">
@@ -88,13 +88,13 @@ export default function Home() {
             <div className="mt-10 flex flex-wrap gap-4">
               <Link
                 href="/booking"
-                className="rounded-sm bg-gold px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-black transition-all duration-300 hover:bg-gold-light hover:shadow-[0_0_30px_rgba(212,175,55,0.25)]"
+                className="rounded-sm bg-pink px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-white transition-all duration-300 hover:bg-pink-light hover:shadow-[0_0_30px_rgba(233,30,140,0.25)]"
               >
                 Book Appointment
               </Link>
               <Link
                 href="/services"
-                className="rounded-sm border border-gold/30 px-8 py-4 text-sm uppercase tracking-[0.2em] text-gold transition-all duration-300 hover:border-gold hover:bg-gold/5"
+                className="rounded-sm border border-pink/30 px-8 py-4 text-sm uppercase tracking-[0.2em] text-pink transition-all duration-300 hover:border-pink hover:bg-pink/5"
               >
                 Explore Services
               </Link>
@@ -104,7 +104,7 @@ export default function Home() {
             <div className="mt-16 grid grid-cols-2 gap-6 sm:grid-cols-4">
               {stats.map((s) => (
                 <div key={s.label}>
-                  <p className="text-2xl font-semibold text-gradient-gold md:text-3xl">
+                  <p className="text-2xl font-semibold text-gradient-pink md:text-3xl">
                     {s.value}
                   </p>
                   <p className="mt-1 text-[10px] uppercase tracking-[0.15em] text-white-dim/50">
@@ -118,8 +118,8 @@ export default function Home() {
           {/* Right: Hero Image */}
           <div className="relative hidden lg:block">
             <Image
-              src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=900&q=80"
-              alt="Luxury salon interior"
+              src="/salon-entrance.png"
+              alt="Glamrootz Signature salon entrance"
               fill
               className="object-cover"
               priority
@@ -128,8 +128,8 @@ export default function Home() {
 
             {/* Floating info cards */}
             <div className="absolute right-8 top-1/4 w-64 space-y-4">
-              <div className="rounded-sm border border-gold/20 bg-black/80 p-5 backdrop-blur-md">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-gold">
+              <div className="rounded-sm border border-pink/20 bg-black/80 p-5 backdrop-blur-md">
+                <p className="text-[10px] uppercase tracking-[0.3em] text-pink">
                   This Week
                 </p>
                 <p className="mt-2 text-lg font-semibold text-white">
@@ -139,8 +139,8 @@ export default function Home() {
                   Hair contouring, bridal previews, and premium skin rituals.
                 </p>
               </div>
-              <div className="rounded-sm border border-gold/20 bg-black/80 p-4 backdrop-blur-md">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-gold">
+              <div className="rounded-sm border border-pink/20 bg-black/80 p-4 backdrop-blur-md">
+                <p className="text-[10px] uppercase tracking-[0.3em] text-pink">
                   Walk-In Friendly
                 </p>
                 <p className="mt-1 text-xs leading-relaxed text-white-dim/60">
@@ -154,8 +154,8 @@ export default function Home() {
         {/* Mobile hero image */}
         <div className="relative h-72 lg:hidden">
           <Image
-            src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=900&q=80"
-            alt="Luxury salon interior"
+            src="/salon-entrance.png"
+            alt="Glamrootz Signature salon entrance"
             fill
             className="object-cover"
             priority
@@ -165,18 +165,18 @@ export default function Home() {
       </section>
 
       {/* ── HIGHLIGHTS ── */}
-      <section className="border-y border-gold/10 bg-black-light px-6 py-10">
+      <section className="border-y border-pink/10 bg-black-light px-6 py-10">
         <div className="mx-auto flex max-w-5xl flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-8">
-          <span className="text-gold text-xs">&#10022;</span>
+          <span className="text-pink text-xs">&#10022;</span>
           <p className="text-sm text-white-dim/60">
             Private consultations before every transformation.
           </p>
-          <span className="hidden text-gold/30 sm:block">&bull;</span>
+          <span className="hidden text-pink/30 sm:block">&bull;</span>
           <p className="text-sm text-white-dim/60">
             Premium products selected for texture, color retention, and scalp
             health.
           </p>
-          <span className="hidden text-gold/30 sm:block">&bull;</span>
+          <span className="hidden text-pink/30 sm:block">&bull;</span>
           <p className="text-sm text-white-dim/60">
             A unisex salon floor designed for comfort, calm, and precision
             service.
@@ -189,7 +189,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="mb-14 flex items-end justify-between">
             <div>
-              <p className="text-xs uppercase tracking-[0.4em] text-gold/80">
+              <p className="text-xs uppercase tracking-[0.4em] text-pink/80">
                 Signature Menu
               </p>
               <h2 className="mt-3 max-w-md text-3xl font-semibold text-white md:text-4xl">
@@ -198,7 +198,7 @@ export default function Home() {
             </div>
             <Link
               href="/services"
-              className="hidden text-xs uppercase tracking-[0.2em] text-white-dim/60 transition-colors hover:text-gold sm:block"
+              className="hidden text-xs uppercase tracking-[0.2em] text-white-dim/60 transition-colors hover:text-pink sm:block"
             >
               View Full Service List &rarr;
             </Link>
@@ -208,7 +208,7 @@ export default function Home() {
             {services.map((s) => (
               <article
                 key={s.title}
-                className="group overflow-hidden rounded-sm border border-gold/8 bg-black-light transition-all duration-300 hover:-translate-y-1 hover:border-gold/25"
+                className="group overflow-hidden rounded-sm border border-pink/8 bg-black-light transition-all duration-300 hover:-translate-y-1 hover:border-pink/25"
               >
                 <div className="relative h-48 overflow-hidden">
                   <Image
@@ -220,13 +220,13 @@ export default function Home() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black-light to-transparent" />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-lg font-semibold text-white group-hover:text-gold-light transition-colors">
+                  <h3 className="text-lg font-semibold text-white group-hover:text-pink-light transition-colors">
                     {s.title}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-white-dim/60">
                     {s.description}
                   </p>
-                  <p className="mt-4 border-t border-gold/8 pt-3 text-[10px] uppercase tracking-[0.2em] text-gold/70">
+                  <p className="mt-4 border-t border-pink/8 pt-3 text-[10px] uppercase tracking-[0.2em] text-pink/70">
                     {s.tag}
                   </p>
                 </div>
@@ -242,14 +242,14 @@ export default function Home() {
           {/* Image */}
           <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
             <Image
-              src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=800&q=80"
-              alt="Stylist at work"
+              src="/salon-day.png"
+              alt="Glamrootz Signature salon exterior"
               fill
               className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black-light/80 to-transparent" />
             <div className="absolute bottom-6 left-6 right-6">
-              <p className="text-xs uppercase tracking-[0.3em] text-gold">
+              <p className="text-xs uppercase tracking-[0.3em] text-pink">
                 Since 2018
               </p>
               <p className="mt-1 text-lg font-semibold text-white">
@@ -260,7 +260,7 @@ export default function Home() {
 
           {/* Content */}
           <div>
-            <p className="text-xs uppercase tracking-[0.4em] text-gold/80">
+            <p className="text-xs uppercase tracking-[0.4em] text-pink/80">
               Why Guests Return
             </p>
             <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">
@@ -290,7 +290,7 @@ export default function Home() {
                 },
               ].map((item) => (
                 <div key={item.n} className="flex gap-5">
-                  <p className="text-2xl font-semibold text-gold/25">
+                  <p className="text-2xl font-semibold text-pink/25">
                     {item.n}
                   </p>
                   <div>
@@ -307,7 +307,7 @@ export default function Home() {
 
             <Link
               href="/about"
-              className="mt-10 inline-block text-sm uppercase tracking-[0.2em] text-gold transition-colors hover:text-gold-light"
+              className="mt-10 inline-block text-sm uppercase tracking-[0.2em] text-pink transition-colors hover:text-pink-light"
             >
               Learn more about us &rarr;
             </Link>
@@ -320,7 +320,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 flex items-end justify-between">
             <div>
-              <p className="text-xs uppercase tracking-[0.4em] text-gold/80">
+              <p className="text-xs uppercase tracking-[0.4em] text-pink/80">
                 Our Work
               </p>
               <h2 className="mt-3 text-3xl font-semibold text-white">
@@ -329,7 +329,7 @@ export default function Home() {
             </div>
             <Link
               href="/gallery"
-              className="hidden text-xs uppercase tracking-[0.2em] text-white-dim/60 transition-colors hover:text-gold sm:block"
+              className="hidden text-xs uppercase tracking-[0.2em] text-white-dim/60 transition-colors hover:text-pink sm:block"
             >
               View Gallery &rarr;
             </Link>
@@ -378,7 +378,7 @@ export default function Home() {
       <section className="bg-black-light px-6 py-24 lg:py-32">
         <div className="mx-auto max-w-5xl">
           <div className="mb-14 text-center">
-            <p className="text-xs uppercase tracking-[0.4em] text-gold/80">
+            <p className="text-xs uppercase tracking-[0.4em] text-pink/80">
               Guest Notes
             </p>
             <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">
@@ -390,11 +390,11 @@ export default function Home() {
             {testimonials.map((t) => (
               <blockquote
                 key={t.name}
-                className="rounded-sm border border-gold/8 bg-black p-8"
+                className="rounded-sm border border-pink/8 bg-black p-8"
               >
                 <div className="mb-4 flex gap-1">
                   {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-gold text-sm">
+                    <span key={i} className="text-pink text-sm">
                       &#9733;
                     </span>
                   ))}
@@ -402,7 +402,7 @@ export default function Home() {
                 <p className="text-sm leading-relaxed text-white-dim/70 italic">
                   &ldquo;{t.quote}&rdquo;
                 </p>
-                <footer className="mt-5 text-xs font-semibold uppercase tracking-[0.15em] text-gold/80">
+                <footer className="mt-5 text-xs font-semibold uppercase tracking-[0.15em] text-pink/80">
                   {t.name}
                 </footer>
               </blockquote>
@@ -415,8 +415,8 @@ export default function Home() {
       <section className="relative overflow-hidden bg-black px-6 py-24 lg:py-32">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?w=1200&q=70"
-            alt="Salon ambiance"
+            src="/salon-night.png"
+            alt="Glamrootz Signature salon at night"
             fill
             className="object-cover opacity-20"
           />
@@ -424,7 +424,7 @@ export default function Home() {
         </div>
         <div className="relative z-10 mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-semibold text-white md:text-5xl">
-            Ready for a <span className="text-gradient-gold">transformation</span>?
+            Ready for a <span className="text-gradient-pink">transformation</span>?
           </h2>
           <p className="mx-auto mt-5 max-w-md text-base text-white-dim/70">
             Book your appointment today and experience the Glamrootz Signature
@@ -433,13 +433,13 @@ export default function Home() {
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
               href="/booking"
-              className="rounded-sm bg-gold px-10 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-black transition-all duration-300 hover:bg-gold-light"
+              className="rounded-sm bg-pink px-10 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-white transition-all duration-300 hover:bg-pink-light"
             >
               Book Now
             </Link>
             <a
               href="tel:+919500569095"
-              className="rounded-sm border border-gold/30 px-10 py-4 text-sm uppercase tracking-[0.2em] text-gold transition-all duration-300 hover:border-gold hover:bg-gold/5"
+              className="rounded-sm border border-pink/30 px-10 py-4 text-sm uppercase tracking-[0.2em] text-pink transition-all duration-300 hover:border-pink hover:bg-pink/5"
             >
               Call Us
             </a>

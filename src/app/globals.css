@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  --gold: #D4AF37;
-  --gold-light: #E8D48B;
-  --gold-dark: #B8960C;
+  --pink: #E91E8C;
+  --pink-light: #F472B6;
+  --pink-dark: #BE185D;
   --black: #0A0A0A;
   --black-light: #1A1A1A;
   --black-lighter: #2A2A2A;
@@ -12,9 +12,9 @@
 }
 
 @theme inline {
-  --color-gold: var(--gold);
-  --color-gold-light: var(--gold-light);
-  --color-gold-dark: var(--gold-dark);
+  --color-pink: var(--pink);
+  --color-pink-light: var(--pink-light);
+  --color-pink-dark: var(--pink-dark);
   --color-black: var(--black);
   --color-black-light: var(--black-light);
   --color-black-lighter: var(--black-lighter);
@@ -42,18 +42,18 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display), serif;
 }
 
-/* Gold gradient text */
-.text-gradient-gold {
-  background: linear-gradient(135deg, var(--gold-light), var(--gold), var(--gold-dark));
+/* Pink gradient text */
+.text-gradient-pink {
+  background: linear-gradient(135deg, var(--pink-light), var(--pink), var(--pink-dark));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Gold border glow */
-.border-gold-glow {
-  border: 1px solid var(--gold);
-  box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
+/* Pink border glow */
+.border-pink-glow {
+  border: 1px solid var(--pink);
+  box-shadow: 0 0 15px rgba(233, 30, 140, 0.15);
 }
 
 /* Smooth scroll */
@@ -71,10 +71,10 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--gold-dark);
+  background: var(--pink-dark);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--gold);
+  background: var(--pink);
 }

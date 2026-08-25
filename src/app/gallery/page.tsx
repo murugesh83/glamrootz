@@ -80,13 +80,13 @@ export default function Gallery() {
     <>
       {/* Hero */}
       <section className="py-24 px-6 bg-black relative">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(212,175,55,0.06)_0%,_transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(233,30,140,0.06)_0%,_transparent_60%)]" />
         <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <p className="text-gold tracking-[0.3em] uppercase text-xs mb-4">
+          <p className="text-pink tracking-[0.3em] uppercase text-xs mb-4">
             Our Portfolio
           </p>
           <h1 className="text-4xl md:text-6xl font-semibold text-white mb-6">
-            <span className="text-gradient-gold">Gallery</span>
+            <span className="text-gradient-pink">Gallery</span>
           </h1>
           <p className="text-white-dim/70 text-lg max-w-xl mx-auto">
             Browse through our work and see the transformations we create every
@@ -112,7 +112,7 @@ export default function Gallery() {
                 />
                 <div className="absolute inset-0 bg-black/30 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 translate-y-full transition-transform duration-300 group-hover:translate-y-0">
-                  <p className="text-[10px] uppercase tracking-[0.2em] text-gold mb-0.5">
+                  <p className="text-[10px] uppercase tracking-[0.2em] text-pink mb-0.5">
                     {item.category}
                   </p>
                   <p className="text-sm font-medium text-white">
@@ -132,12 +132,12 @@ export default function Gallery() {
             Follow us for daily inspiration
           </p>
           <a
-            href="https://www.instagram.com/glamrootz.signature"
+            href="https://www.instagram.com/glamrootzkolapakkam/"
             target="_blank"
             rel="noreferrer"
-            className="inline-block text-gold text-lg font-semibold hover:text-gold-light transition-colors"
+            className="inline-block text-pink text-lg font-semibold hover:text-pink-light transition-colors"
           >
-            @glamrootz.signature
+            @glamrootzkolapakkam
           </a>
           <p className="text-white-dim/40 text-xs mt-1">on Instagram</p>
         </div>

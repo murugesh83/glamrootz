@@ -1,56 +1,25 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const team = [
-  {
-    name: "Arjun Kapoor",
-    role: "Founder & Master Stylist",
-    exp: "15 years",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
-  },
-  {
-    name: "Meera Nair",
-    role: "Senior Colorist",
-    exp: "10 years",
-    image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80",
-  },
-  {
-    name: "Vikram Singh",
-    role: "Grooming Specialist",
-    exp: "8 years",
-    image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80",
-  },
-  {
-    name: "Sneha Reddy",
-    role: "Skin Care Expert",
-    exp: "12 years",
-    image:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80",
-  },
-];
-
 export default function About() {
   return (
     <>
       {/* Hero with background image */}
       <section className="relative overflow-hidden bg-black py-32 px-6">
         <Image
-          src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=1400&q=70"
-          alt="Salon interior"
+          src="/salon-wide.png"
+          alt="Glamrootz Signature salon"
           fill
           className="object-cover opacity-15"
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black" />
         <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <p className="text-gold tracking-[0.3em] uppercase text-xs mb-4">
+          <p className="text-pink tracking-[0.3em] uppercase text-xs mb-4">
             Our Story
           </p>
           <h1 className="text-4xl md:text-6xl font-semibold text-white mb-6">
-            About <span className="text-gradient-gold">Glamrootz</span>
+            About <span className="text-gradient-pink">Glamrootz</span>
           </h1>
           <p className="text-white-dim/70 text-lg max-w-xl mx-auto">
             Where luxury meets artistry, and every appointment tells a story.
@@ -62,34 +31,34 @@ export default function About() {
       <section className="py-24 px-6 bg-black-light">
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <p className="text-xs uppercase tracking-[0.4em] text-gold/80 mb-3">
-              The Beginning
+            <p className="text-xs uppercase tracking-[0.4em] text-pink/80 mb-3">
+              Our Philosophy
             </p>
             <h2 className="text-3xl font-semibold text-white mb-6">
-              A legacy of luxury since 2018
+              Contemporary hair artistry &amp; premium beauty experiences
             </h2>
             <p className="text-white-dim/70 leading-relaxed mb-4">
-              Founded in 2018, Glamrootz Signature was born from a vision to
-              redefine the salon experience. We believe that grooming is not just
-              a service &mdash; it&apos;s an art form that deserves the finest
-              attention to detail.
+              Step into a world of contemporary hair artistry, refined styling,
+              and premium beauty experiences at Glamrootz Signature Unisex Salon.
+              Led by Mrs. Vidhya M, our experienced team of professionals
+              combines technical expertise, creativity, and an eye for detail to
+              deliver personalised looks that reflect each client&apos;s unique
+              style and personality.
             </p>
             <p className="text-white-dim/70 leading-relaxed mb-4">
-              Our salon combines cutting-edge techniques with timeless elegance,
-              creating a space where every client feels like royalty. From our
-              carefully curated product line to our meticulously trained team,
-              every element of Glamrootz is designed to deliver excellence.
+              Spread across an expansive 2,400+ sq. ft. luxury space, Glamrootz
+              Signature offers dedicated services for both women and men in an
+              elegant, comfortable, and professionally designed environment.
             </p>
             <p className="text-white-dim/70 leading-relaxed">
-              We don&apos;t just style hair &mdash; we craft confidence. We
-              don&apos;t just offer treatments &mdash; we create
-              transformations.
+              Our philosophy is simple &mdash; to help every client look
+              confident, feel beautiful, and leave with a renewed sense of self.
             </p>
           </div>
           <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
             <Image
-              src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80"
-              alt="Glamrootz salon interior"
+              src="/salon-entrance.png"
+              alt="Glamrootz Signature entrance"
               fill
               className="object-cover"
             />
@@ -98,14 +67,43 @@ export default function About() {
         </div>
       </section>
 
-      {/* Values */}
+      {/* Services Overview */}
       <section className="py-24 px-6 bg-black">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <p className="text-xs uppercase tracking-[0.4em] text-gold/80 mb-3">
+            <p className="text-xs uppercase tracking-[0.4em] text-pink/80 mb-3">
+              What We Offer
+            </p>
+            <h2 className="text-3xl font-semibold text-white max-w-2xl mx-auto">
+              A comprehensive range of premium services from head to toe
+            </h2>
+          </div>
+          <div className="max-w-4xl mx-auto">
+            <p className="text-white-dim/70 leading-relaxed mb-6 text-center">
+              From precision haircuts, advanced colouring, and contemporary
+              styling to professional skin care and complete beauty solutions, we
+              offer a comprehensive range of premium services designed to meet
+              your grooming and beauty needs from head to toe.
+            </p>
+            <p className="text-white-dim/70 leading-relaxed text-center">
+              At Glamrootz Signature, every service is thoughtfully delivered
+              with a commitment to quality, hygiene, personalised care, and
+              perfection. We continuously embrace evolving trends, modern
+              techniques, and professional standards to ensure every visit
+              delivers a distinctive and elevated salon experience.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Values */}
+      <section className="py-24 px-6 bg-black-light">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <p className="text-xs uppercase tracking-[0.4em] text-pink/80 mb-3">
               What Drives Us
             </p>
-            <h2 className="text-3xl font-semibold text-gradient-gold">
+            <h2 className="text-3xl font-semibold text-gradient-pink">
               Our Values
             </h2>
           </div>
@@ -132,7 +130,7 @@ export default function About() {
             ].map((v) => (
               <div
                 key={v.title}
-                className="group overflow-hidden rounded-sm border border-gold/8 bg-black-light"
+                className="group overflow-hidden rounded-sm border border-pink/8 bg-black"
               >
                 <div className="relative h-48 overflow-hidden">
                   <Image
@@ -141,10 +139,10 @@ export default function About() {
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black-light to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent" />
                 </div>
                 <div className="p-7">
-                  <h3 className="text-lg font-semibold text-gold mb-2">
+                  <h3 className="text-lg font-semibold text-pink mb-2">
                     {v.title}
                   </h3>
                   <p className="text-white-dim/60 text-sm leading-relaxed">
@@ -157,47 +155,31 @@ export default function About() {
         </div>
       </section>
 
-      {/* Team */}
-      <section className="py-24 px-6 bg-black-light">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <p className="text-xs uppercase tracking-[0.4em] text-gold/80 mb-3">
-              The Artists
-            </p>
-            <h2 className="text-3xl font-semibold text-white">
-              Meet Our Team
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member) => (
-              <div key={member.name} className="group text-center">
-                <div className="relative aspect-[3/4] overflow-hidden rounded-sm mb-5">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                </div>
-                <h3 className="text-base font-semibold text-white">
-                  {member.name}
-                </h3>
-                <p className="text-white-dim/60 text-sm mt-1">{member.role}</p>
-                <p className="text-gold/50 text-xs mt-1">
-                  {member.exp} experience
-                </p>
-              </div>
-            ))}
-          </div>
+      {/* Proprietor */}
+      <section className="py-24 px-6 bg-black">
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-xs uppercase tracking-[0.4em] text-pink/80 mb-3">
+            Leadership
+          </p>
+          <h2 className="text-3xl font-semibold text-white mb-6">
+            Mrs. Vidhya M
+          </h2>
+          <p className="text-pink font-script text-lg mb-4">
+            Proprietor &amp; Makeup Artist
+          </p>
+          <p className="text-white-dim/70 leading-relaxed max-w-xl mx-auto">
+            With a passion for beauty and an unwavering commitment to
+            excellence, Mrs. Vidhya M leads Glamrootz Signature with a vision
+            to redefine the salon experience in Kolapakkam, Chennai.
+          </p>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-6 bg-black text-center">
+      <section className="py-20 px-6 bg-black-light text-center">
         <h2 className="text-3xl font-semibold text-white mb-4">
-          Experience Glamrootz <span className="text-gradient-gold">Signature</span>
+          Experience Glamrootz{" "}
+          <span className="text-gradient-pink">Signature</span>
         </h2>
         <p className="text-white-dim/60 mb-8 max-w-md mx-auto">
           Book a consultation and discover the difference that attention to
@@ -205,7 +187,7 @@ export default function About() {
         </p>
         <Link
           href="/booking"
-          className="inline-block rounded-sm bg-gold px-10 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-black transition-all duration-300 hover:bg-gold-light"
+          className="inline-block rounded-sm bg-pink px-10 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-white transition-all duration-300 hover:bg-pink-light"
         >
           Book Now
         </Link>

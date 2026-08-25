@@ -75,14 +75,14 @@ export const socialLinks: SocialLink[] = [
   {
     id: "facebook",
     label: "Facebook",
-    href: "https://www.facebook.com/glamrootz.signature",
+    href: "https://www.facebook.com/profile.php?id=100063725185402",
     railClassName: "bg-[#1877F2]",
     renderIcon: FacebookIcon,
   },
   {
     id: "instagram",
     label: "Instagram",
-    href: "https://www.instagram.com/glamrootz.signature",
+    href: "https://www.instagram.com/glamrootzkolapakkam/",
     railClassName: "",
     railStyle: {
       background:
@@ -93,7 +93,7 @@ export const socialLinks: SocialLink[] = [
   {
     id: "youtube",
     label: "YouTube",
-    href: "https://www.youtube.com/@glamrootzsignature",
+    href: "https://www.youtube.com/@glamrootzkolapakkam",
     railClassName: "bg-[#FF0000]",
     renderIcon: YouTubeIcon,
   },
