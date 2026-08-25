@@ -4,33 +4,46 @@ import Link from "next/link";
 export default function About() {
   return (
     <>
-      {/* Hero with background image */}
-      <section className="relative overflow-hidden bg-black py-32 px-6">
-        <Image
-          src="/salon-wide.png"
-          alt="Glamrootz Signature salon"
-          fill
-          className="object-cover opacity-15"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black" />
-        <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <p className="text-pink tracking-[0.3em] uppercase text-xs mb-4">
-            Our Story
-          </p>
-          <h1 className="text-4xl md:text-6xl font-semibold text-white mb-6">
-            About <span className="text-gradient-pink">Glamrootz</span>
-          </h1>
-          <p className="text-white-dim/70 text-lg max-w-xl mx-auto">
-            Where luxury meets artistry, and every appointment tells a story.
-          </p>
+      {/* Hero Image + Our Story */}
+      <section className="relative bg-black pt-20">
+        <div className="relative h-[50vh] md:h-[60vh] overflow-hidden">
+          <Image
+            src="/salon-wide.png"
+            alt="Glamrootz Signature salon"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
+          <div className="absolute bottom-8 left-0 right-0 z-10 px-6">
+            <div className="max-w-6xl mx-auto">
+              <p className="text-pink tracking-[0.3em] uppercase text-xs mb-3">
+                Our Story
+              </p>
+              <h1 className="text-3xl md:text-5xl font-semibold text-white mb-3">
+                About <span className="text-gradient-pink">Glamrootz</span>
+              </h1>
+              <p className="text-white-dim/80 text-base md:text-lg max-w-xl">
+                Where luxury meets artistry, and every appointment tells a story.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Story */}
+      {/* Our Philosophy */}
       <section className="py-24 px-6 bg-black-light">
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div>
+          <div className="relative aspect-[4/5] overflow-hidden rounded-sm order-2 lg:order-1">
+            <Image
+              src="/salon-entrance.png"
+              alt="Glamrootz Signature entrance"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black-light/60 to-transparent" />
+          </div>
+          <div className="order-1 lg:order-2">
             <p className="text-xs uppercase tracking-[0.4em] text-pink/80 mb-3">
               Our Philosophy
             </p>
@@ -54,15 +67,6 @@ export default function About() {
               Our philosophy is simple &mdash; to help every client look
               confident, feel beautiful, and leave with a renewed sense of self.
             </p>
-          </div>
-          <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
-            <Image
-              src="/salon-entrance.png"
-              alt="Glamrootz Signature entrance"
-              fill
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black-light/60 to-transparent" />
           </div>
         </div>
       </section>
