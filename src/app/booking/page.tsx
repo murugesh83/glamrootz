@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 
 const services = [
@@ -54,7 +53,7 @@ export default function Booking() {
 
   if (submitted) {
     return (
-      <section className="py-32 px-6 bg-black min-h-[70vh] flex items-center justify-center">
+      <section className="pt-28 pb-20 px-6 bg-black min-h-[70vh] flex items-center justify-center">
         <div className="max-w-lg mx-auto text-center">
           <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full border-2 border-pink bg-pink/10">
             <span className="text-pink text-3xl">&#10003;</span>
@@ -78,138 +77,122 @@ export default function Booking() {
   }
 
   return (
-    <>
-      {/* Hero */}
-      <section className="relative overflow-hidden bg-black py-28 px-6">
-        <Image
-          src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?w=1400&q=70"
-          alt="Salon chair"
-          fill
-          className="object-cover opacity-10"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black" />
-        <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <p className="text-pink tracking-[0.3em] uppercase text-xs mb-4">
+    <section className="pt-28 pb-20 px-6 bg-black min-h-screen">
+      <div className="max-w-xl mx-auto">
+        <div className="text-center mb-10">
+          <p className="text-pink tracking-[0.3em] uppercase text-xs mb-3">
             Reserve Your Spot
           </p>
-          <h1 className="text-4xl md:text-6xl font-semibold text-white mb-6">
-            Book <span className="text-gradient-pink">Appointment</span>
+          <h1 className="text-3xl md:text-4xl font-semibold text-white mb-3">
+            Book Appointment
           </h1>
-          <p className="text-white-dim/70 text-lg max-w-xl mx-auto">
+          <p className="text-white-dim/60 text-sm max-w-md mx-auto">
             Choose your service, pick a time, and we&apos;ll take care of the
             rest.
           </p>
         </div>
-      </section>
 
-      {/* Booking Form */}
-      <section className="py-20 px-6 bg-black-light">
-        <div className="max-w-2xl mx-auto">
-          <form onSubmit={handleSubmit} className="space-y-7">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div>
-                <label className="block text-pink text-xs tracking-[0.2em] uppercase mb-2">
-                  Full Name
-                </label>
-                <input
-                  type="text"
-                  required
-                  placeholder="Enter your name"
-                  className="w-full bg-black border border-pink/15 text-white px-4 py-3 rounded-sm text-sm focus:border-pink focus:outline-none transition-colors placeholder:text-white-dim/25"
-                />
-              </div>
-              <div>
-                <label className="block text-pink text-xs tracking-[0.2em] uppercase mb-2">
-                  Phone Number
-                </label>
-                <input
-                  type="tel"
-                  required
-                  placeholder="+91 95005 69095"
-                  className="w-full bg-black border border-pink/15 text-white px-4 py-3 rounded-sm text-sm focus:border-pink focus:outline-none transition-colors placeholder:text-white-dim/25"
-                />
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div>
-                <label className="block text-pink text-xs tracking-[0.2em] uppercase mb-2">
-                  Service
-                </label>
-                <select
-                  required
-                  className="w-full bg-black border border-pink/15 text-white px-4 py-3 rounded-sm text-sm focus:border-pink focus:outline-none transition-colors appearance-none"
-                >
-                  <option value="">Select a service</option>
-                  {services.map((s) => (
-                    <option key={s} value={s}>
-                      {s}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              <div>
-                <label className="block text-pink text-xs tracking-[0.2em] uppercase mb-2">
-                  Preferred Date
-                </label>
-                <input
-                  type="date"
-                  required
-                  className="w-full bg-black border border-pink/15 text-white px-4 py-3 rounded-sm text-sm focus:border-pink focus:outline-none transition-colors"
-                />
-              </div>
-            </div>
-
-            {/* Time Slots */}
-            <div>
-              <label className="block text-pink text-xs tracking-[0.2em] uppercase mb-3">
-                Preferred Time
-              </label>
-              <div className="grid grid-cols-4 sm:grid-cols-5 gap-2">
-                {timeSlots.map((time) => (
-                  <button
-                    key={time}
-                    type="button"
-                    onClick={() => setSelectedTime(time)}
-                    className={`py-2.5 px-1 text-xs tracking-wider rounded-sm border transition-all duration-200 ${
-                      selectedTime === time
-                        ? "bg-pink text-white border-pink font-semibold"
-                        : "border-pink/15 text-white-dim/60 hover:border-pink/40 hover:text-pink"
-                    }`}
-                  >
-                    {time}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Notes */}
+        <form onSubmit={handleSubmit} className="space-y-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <div>
               <label className="block text-pink text-xs tracking-[0.2em] uppercase mb-2">
-                Special Requests (Optional)
+                Full Name
               </label>
-              <textarea
-                rows={3}
-                placeholder="Any specific requirements or preferences..."
-                className="w-full bg-black border border-pink/15 text-white px-4 py-3 rounded-sm text-sm focus:border-pink focus:outline-none transition-colors resize-none placeholder:text-white-dim/25"
+              <input
+                type="text"
+                required
+                placeholder="Enter your name"
+                className="w-full bg-black-light border border-pink/15 text-white px-4 py-3 rounded-sm text-sm focus:border-pink focus:outline-none transition-colors placeholder:text-white-dim/25"
               />
             </div>
+            <div>
+              <label className="block text-pink text-xs tracking-[0.2em] uppercase mb-2">
+                Phone Number
+              </label>
+              <input
+                type="tel"
+                required
+                placeholder="+91 95005 69095"
+                className="w-full bg-black-light border border-pink/15 text-white px-4 py-3 rounded-sm text-sm focus:border-pink focus:outline-none transition-colors placeholder:text-white-dim/25"
+              />
+            </div>
+          </div>
 
-            <button
-              type="submit"
-              className="w-full py-4 bg-pink text-white font-semibold tracking-[0.2em] uppercase text-sm hover:bg-pink-light transition-all duration-300 rounded-sm"
-            >
-              Confirm Booking
-            </button>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label className="block text-pink text-xs tracking-[0.2em] uppercase mb-2">
+                Service
+              </label>
+              <select
+                required
+                className="w-full bg-black-light border border-pink/15 text-white px-4 py-3 rounded-sm text-sm focus:border-pink focus:outline-none transition-colors appearance-none"
+              >
+                <option value="">Select a service</option>
+                {services.map((s) => (
+                  <option key={s} value={s}>
+                    {s}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div>
+              <label className="block text-pink text-xs tracking-[0.2em] uppercase mb-2">
+                Preferred Date
+              </label>
+              <input
+                type="date"
+                required
+                className="w-full bg-black-light border border-pink/15 text-white px-4 py-3 rounded-sm text-sm focus:border-pink focus:outline-none transition-colors"
+              />
+            </div>
+          </div>
 
-            <p className="text-white-dim/40 text-xs text-center">
-              We&apos;ll confirm your appointment via WhatsApp or phone call
-              within 30 minutes.
-            </p>
-          </form>
-        </div>
-      </section>
-    </>
+          <div>
+            <label className="block text-pink text-xs tracking-[0.2em] uppercase mb-3">
+              Preferred Time
+            </label>
+            <div className="grid grid-cols-4 sm:grid-cols-5 gap-2">
+              {timeSlots.map((time) => (
+                <button
+                  key={time}
+                  type="button"
+                  onClick={() => setSelectedTime(time)}
+                  className={`py-2 px-1 text-xs tracking-wider rounded-sm border transition-all duration-200 ${
+                    selectedTime === time
+                      ? "bg-pink text-white border-pink font-semibold"
+                      : "border-pink/15 text-white-dim/60 hover:border-pink/40 hover:text-pink"
+                  }`}
+                >
+                  {time}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <label className="block text-pink text-xs tracking-[0.2em] uppercase mb-2">
+              Special Requests (Optional)
+            </label>
+            <textarea
+              rows={3}
+              placeholder="Any specific requirements or preferences..."
+              className="w-full bg-black-light border border-pink/15 text-white px-4 py-3 rounded-sm text-sm focus:border-pink focus:outline-none transition-colors resize-none placeholder:text-white-dim/25"
+            />
+          </div>
+
+          <button
+            type="submit"
+            className="w-full py-4 bg-pink text-white font-semibold tracking-[0.2em] uppercase text-sm hover:bg-pink-light transition-all duration-300 rounded-sm"
+          >
+            Confirm Booking
+          </button>
+
+          <p className="text-white-dim/40 text-xs text-center">
+            We&apos;ll confirm your appointment via WhatsApp or phone call
+            within 30 minutes.
+          </p>
+        </form>
+      </div>
+    </section>
   );
 }
