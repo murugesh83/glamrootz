@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 
 export default function Contact() {
@@ -12,44 +11,32 @@ export default function Contact() {
   }
 
   return (
-    <>
-      {/* Hero */}
-      <section className="relative overflow-hidden bg-black py-28 px-6">
-        <Image
-          src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=1400&q=70"
-          alt="Salon"
-          fill
-          className="object-cover opacity-10"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black" />
-        <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <p className="text-pink tracking-[0.3em] uppercase text-xs mb-4">
+    <section className="pt-28 pb-20 px-6 bg-black min-h-screen">
+      <div className="max-w-5xl mx-auto">
+        <div className="text-center mb-12">
+          <p className="text-pink tracking-[0.3em] uppercase text-xs mb-3">
             Get in Touch
           </p>
-          <h1 className="text-4xl md:text-6xl font-semibold text-white mb-6">
-            Contact <span className="text-gradient-pink">Us</span>
+          <h1 className="text-3xl md:text-4xl font-semibold text-white mb-3">
+            Contact Us
           </h1>
-          <p className="text-white-dim/70 text-lg max-w-xl mx-auto">
+          <p className="text-white-dim/60 text-sm max-w-md mx-auto">
             Have a question or want to know more? We&apos;d love to hear from
             you.
           </p>
         </div>
-      </section>
 
-      {/* Contact Info + Form */}
-      <section className="py-20 px-6 bg-black-light">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Info */}
           <div>
-            <h2 className="text-2xl font-semibold text-white mb-8">
+            <h2 className="text-lg font-semibold text-white mb-6">
               Visit Our Salon
             </h2>
 
-            <div className="space-y-6">
+            <div className="space-y-5">
               {[
                 {
-                  icon: "\u2316",
+                  icon: "⌖",
                   title: "Address",
                   content: (
                     <p className="text-white-dim/60 text-sm leading-relaxed">
@@ -62,7 +49,7 @@ export default function Contact() {
                   ),
                 },
                 {
-                  icon: "\u260E",
+                  icon: "☎",
                   title: "Phone",
                   content: (
                     <div className="flex flex-col gap-1">
@@ -82,7 +69,7 @@ export default function Contact() {
                   ),
                 },
                 {
-                  icon: "\u2709",
+                  icon: "✉",
                   title: "Email",
                   content: (
                     <a
@@ -94,7 +81,7 @@ export default function Contact() {
                   ),
                 },
                 {
-                  icon: "\u23F0",
+                  icon: "⏰",
                   title: "Hours",
                   content: (
                     <div className="text-white-dim/60 text-sm space-y-1">
@@ -105,8 +92,8 @@ export default function Contact() {
                 },
               ].map((item) => (
                 <div key={item.title} className="flex items-start gap-4">
-                  <div className="w-11 h-11 border border-pink/15 rounded-sm flex items-center justify-center shrink-0 bg-pink/5">
-                    <span className="text-pink">{item.icon}</span>
+                  <div className="w-10 h-10 border border-pink/15 rounded-sm flex items-center justify-center shrink-0 bg-pink/5">
+                    <span className="text-pink text-sm">{item.icon}</span>
                   </div>
                   <div>
                     <h3 className="text-white text-sm font-medium mb-1">
@@ -118,36 +105,27 @@ export default function Contact() {
               ))}
             </div>
 
-            {/* Map */}
-            <div className="mt-10 relative aspect-video overflow-hidden rounded-sm border border-pink/10">
-              <Image
-                src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&q=70"
-                alt="Location map placeholder"
-                fill
-                className="object-cover opacity-40"
-              />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <a
-                  href="https://maps.app.goo.gl/KgPV9sJVFKqTwPTf6"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="rounded-sm bg-pink/90 px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white hover:bg-pink transition-colors"
-                >
-                  Open in Google Maps
-                </a>
-              </div>
+            <div className="mt-8">
+              <a
+                href="https://maps.app.goo.gl/KgPV9sJVFKqTwPTf6"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-block rounded-sm border border-pink/30 px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-pink hover:bg-pink/10 transition-all duration-300"
+              >
+                Open in Google Maps
+              </a>
             </div>
           </div>
 
           {/* Form */}
           <div>
-            <h2 className="text-2xl font-semibold text-white mb-8">
+            <h2 className="text-lg font-semibold text-white mb-6">
               Send a Message
             </h2>
 
             {sent ? (
-              <div className="border border-pink/15 rounded-sm p-12 text-center bg-black/50">
-                <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full border-2 border-pink bg-pink/10">
+              <div className="border border-pink/15 rounded-sm p-10 text-center bg-black-light">
+                <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full border-2 border-pink bg-pink/10">
                   <span className="text-pink text-2xl">&#10003;</span>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">
@@ -165,8 +143,8 @@ export default function Contact() {
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <form onSubmit={handleSubmit} className="space-y-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
                     <label className="block text-pink text-xs tracking-[0.2em] uppercase mb-2">
                       Name
@@ -175,7 +153,7 @@ export default function Contact() {
                       type="text"
                       required
                       placeholder="Your name"
-                      className="w-full bg-black border border-pink/15 text-white px-4 py-3 rounded-sm text-sm focus:border-pink focus:outline-none transition-colors placeholder:text-white-dim/25"
+                      className="w-full bg-black-light border border-pink/15 text-white px-4 py-3 rounded-sm text-sm focus:border-pink focus:outline-none transition-colors placeholder:text-white-dim/25"
                     />
                   </div>
                   <div>
@@ -185,7 +163,7 @@ export default function Contact() {
                     <input
                       type="tel"
                       placeholder="Your phone"
-                      className="w-full bg-black border border-pink/15 text-white px-4 py-3 rounded-sm text-sm focus:border-pink focus:outline-none transition-colors placeholder:text-white-dim/25"
+                      className="w-full bg-black-light border border-pink/15 text-white px-4 py-3 rounded-sm text-sm focus:border-pink focus:outline-none transition-colors placeholder:text-white-dim/25"
                     />
                   </div>
                 </div>
@@ -198,7 +176,7 @@ export default function Contact() {
                     type="email"
                     required
                     placeholder="your@email.com"
-                    className="w-full bg-black border border-pink/15 text-white px-4 py-3 rounded-sm text-sm focus:border-pink focus:outline-none transition-colors placeholder:text-white-dim/25"
+                    className="w-full bg-black-light border border-pink/15 text-white px-4 py-3 rounded-sm text-sm focus:border-pink focus:outline-none transition-colors placeholder:text-white-dim/25"
                   />
                 </div>
 
@@ -210,7 +188,7 @@ export default function Contact() {
                     type="text"
                     required
                     placeholder="How can we help?"
-                    className="w-full bg-black border border-pink/15 text-white px-4 py-3 rounded-sm text-sm focus:border-pink focus:outline-none transition-colors placeholder:text-white-dim/25"
+                    className="w-full bg-black-light border border-pink/15 text-white px-4 py-3 rounded-sm text-sm focus:border-pink focus:outline-none transition-colors placeholder:text-white-dim/25"
                   />
                 </div>
 
@@ -219,10 +197,10 @@ export default function Contact() {
                     Message
                   </label>
                   <textarea
-                    rows={5}
+                    rows={4}
                     required
                     placeholder="Your message..."
-                    className="w-full bg-black border border-pink/15 text-white px-4 py-3 rounded-sm text-sm focus:border-pink focus:outline-none transition-colors resize-none placeholder:text-white-dim/25"
+                    className="w-full bg-black-light border border-pink/15 text-white px-4 py-3 rounded-sm text-sm focus:border-pink focus:outline-none transition-colors resize-none placeholder:text-white-dim/25"
                   />
                 </div>
 
@@ -236,7 +214,7 @@ export default function Contact() {
             )}
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }
